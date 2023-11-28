@@ -14,6 +14,7 @@ pfServer.use(cors())
 pfServer.use(express.json())
 // pfServer.use(appMiddleware)
 pfServer.use(router)
+pfServer.use('/uploads',express.static('./uploads'))
 const PORT = 4000 || process.env.PORT
 
 pfServer.listen(PORT,()=>{
